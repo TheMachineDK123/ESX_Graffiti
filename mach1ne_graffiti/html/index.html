@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graffiti</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Transparent fullscreen canvas -->
+        <div id="canvasWrap">
+            <canvas id="graffitiCanvas"></canvas>
+        </div>
+
+        <!-- Status pill top-center -->
+        <div id="statusBar">
+            <span id="statusIcon">✦</span>
+            <span id="statusLabel">SPRAY</span>
+            <div class="status-sep"></div>
+            <span id="sizeValue">14</span><span class="status-unit">px</span>
+        </div>
+
+        <!-- Main toolbar bottom-center -->
+        <div id="toolbar">
+
+            <!-- Color swatches -->
+            <div class="tool-group" id="colors"></div>
+
+            <div class="sep"></div>
+
+            <!-- Brush sizes -->
+            <div class="tool-group" id="sizes"></div>
+
+            <div class="sep"></div>
+
+            <!-- Tool buttons -->
+            <div class="tool-group">
+                <button class="tool-btn" id="btnEraser" title="Visker [E]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20H7L3 16l10-10 7 7-3.5 3.5"/><path d="M6.5 17.5l4-4"/></svg>
+                    <span>Visker</span>
+                </button>
+                <button class="tool-btn icon-only" id="btnUndo" title="Fortryd [Ctrl+Z]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
+                </button>
+                <button class="tool-btn icon-only" id="btnRedo" title="Gentag [Ctrl+Y]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg>
+                </button>
+            </div>
+
+            <div class="sep"></div>
+
+            <!-- Actions -->
+            <div class="tool-group">
+                <button class="action-btn clear"  id="btnClear"  title="Ryd lærred">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+                    Ryd
+                </button>
+                <button class="action-btn save"   id="btnSave"   title="Spray på væg">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 7 9 18l-5-5"/></svg>
+                    Spray
+                </button>
+                <button class="action-btn cancel" id="btnCancel" title="Annuller [ESC]">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

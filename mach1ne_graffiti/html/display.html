@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { margin: 0; padding: 0; }
+body { background: transparent; overflow: hidden; }
+canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+window.addEventListener('message', function(e) {
+    if (e.data.action === 'show') {
+        var img = new Image();
+        img.onload = function() {
+            var c = document.getElementById('c');
+            c.width = img.width;
+            c.height = img.height;
+            c.getContext('2d').drawImage(img, 0, 0);
+        };
+        img.src = e.data.image;
+    }
+});
+</script>
+</body>
+</html>
