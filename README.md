@@ -2,6 +2,7 @@
 
 __Ox_Inventory item__
 
+```
 ['spraycan'] = {
     label = 'Spraydåse',
     weight = 100,
@@ -11,3 +12,4 @@ __Ox_Inventory item__
         export = 'mach1ne_graffiti.useSpraycan'
     },
 },
+```
