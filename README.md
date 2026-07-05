@@ -13,3 +13,5 @@ __Ox_Inventory item__
     },
 },
 ```
+
+__Discord webhook in server.lua, for logs__
